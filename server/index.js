@@ -13,18 +13,18 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Cette zone va nous servir à créer notre document PDF 
+
 app.post('/create-pdf', (req, res) => {
     pdf.create(pdfTemplate(req.body), { format: 'Letter', orientation: 'landscape' }).toFile('diplome.pdf', (err) => {
         if (err) {
-            res.status(500).send('Erreur lors de la création du PDF');
+            res.status(500).send('Error');
         } else {
-            res.status(200).send('PDF créé avec succès');
+            res.status(200).send('created');
         }
     });
 });
 
-// Alors que cette zone va plus être utiliser pour modifier les infos directement dans notre tableau
+
 app.get('/fetch-pdf', (req, res) => {
     res.sendFile(`${__dirname}/diplome.pdf`);
 });

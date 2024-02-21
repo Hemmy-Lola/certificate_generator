@@ -22,7 +22,7 @@ class App extends Component {
     const selectedCandidate = this.state.candidates.find(candidate => candidate.id === id);
 
     if (!selectedCandidate) {
-        console.error('Candidat introuvable');
+        console.error('not found');
         return;
     }
 
@@ -34,10 +34,9 @@ class App extends Component {
             saveAs(pdfBlob, filename);
         })
         .catch(error => {
-            console.error('Erreur lors de la création du PDF:', error);
+            console.error('Error:', error);
         });
 }
-
 
 
 editCandidate = (index) => {
@@ -75,10 +74,10 @@ addCandidate = () => {
 
   axios.post('/candidates', newCandidate)
       .then(response => {
-          console.log('Candidat ajouté avec succès:', response.data);
+          console.log('ajouté:', response.data);
       })
       .catch(error => {
-          console.error('Erreur lors de l\'ajout du candidat:', error);
+          console.error('Error:', error);
       });
 }
 
@@ -137,7 +136,7 @@ handleEdit = () => {
               <option value="Assez Bien">Mention Assez Bien</option>
               <option value="Admis">Mention Admis</option>
             </select>
-          <button onClick={this.addCandidate}>Ajouter le candidat</button>
+          <button onClick={this.addCandidate}>Ajouter</button>
           <table className="">
              <thead>
                <tr>
