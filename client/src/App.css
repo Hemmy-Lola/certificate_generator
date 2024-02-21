@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Dystopian Black";
+  src: url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.eot");
+  src: url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/20af36ba0a52c9a46fe2963f400bd77c.svg#Dystopian Black")format("svg");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.eot");
+  src: url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/629a55a7e793da068dc580d184cc0e31.svg#Open Sans")format("svg");
+}
+
+* {
+  /* margin: 25px; */
+  background-color: #181818;
+}
+
+.logo {
+  margin: 15px;
+  width: 160px;
+  height: 69px;
+  background-image: url('logo_hetic.svg');
+}
+
+h2 {
+  font-size: 50px;
+  font-family: "Dystopian Black";
+  color: #14F5AA;
+}
+
+p {
+  color: aliceblue;
+  font-family: 'Open Sans';
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+select,
+option {
+  margin-bottom: 30px;
+  width: 500px;
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  background-color: aliceblue;
+  font-family: 'Open Sans';
+}
+
+button {
+  width: 500px;
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  background-color: #14F5AA;
+  font-family: "Dystopian Black";
+}
+
+table {
+  margin-top:50px;
+  table-layout: auto;
+  width: 90%;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+thead {
+  color: aliceblue;
+  font-family: "Dystopian Black";
+}
+
+td {
+  border: 1px solid rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color:aliceblue;
+  font-family: 'Open Sans';
+}
+
+.actions button {
+  width: 100px;
+  height: 35px;
+  background-color: #14F5AA;
+  font-family: "Dystopian Black";
+}
